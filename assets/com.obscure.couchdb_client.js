@@ -8,10 +8,10 @@
  * @see options
  */
 
-Ti.include("sha1.js");
-Ti.include("utils.js");
-Ti.include("ajax.js");
-Ti.include("base64.js");
+Ti.include("modules/com.obscure.couchdb_client/sha1.js");
+Ti.include("modules/com.obscure.couchdb_client/utils.js");
+Ti.include("modules/com.obscure.couchdb_client/ajax.js");
+Ti.include("modules/com.obscure.couchdb_client/base64.js");
 
 /**
  * @name options
