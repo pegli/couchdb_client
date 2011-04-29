@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0
+description: CouchDB Client Module
+author: Paul Mietz Egli
+license: Apache 2.0
+copyright: Copyright (c) 2011 Paul Mietz Egli
+
+
+# these should not be edited
+name: couchdb_client
+moduleid: com.obscure.couchdb_client
+guid: 6474234f-0415-4683-969e-aa0073c86620
+platform: iphone
+minsdk: 1.6.2
