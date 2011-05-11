@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+description: My module
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2010 by Your Company
+
+
+# these should not be edited
+name: couchdb_client
+moduleid: com.obscure.couchdb_client
+guid: 8c0b158d-5d5e-46ad-a709-ca404cb046b1
+platform: android
+minsdk: 1.6.2
