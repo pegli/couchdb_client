@@ -3,25 +3,22 @@
 // to test out the module and to provide instructions 
 // to users on how to use it by example.
 
+Ti.include("com.obscure.couchdb_client.js");
 
 // open a single window
 var window = Ti.UI.createWindow({
 	backgroundColor:'white'
 });
-var label = Ti.UI.createLabel();
+var label = Ti.UI.createLabel({
+  text: "running tests"
+});
 window.add(label);
 window.open();
 
-// TODO: write your module tests here
-var couchdb_client = require('com.obscure.couchdb_client');
-Ti.API.info("module is => " + couchdb_client);
+couchdb_client.urlPrefix = "http://10.8.17.113:5984";
 
-label.text = couchdb_client.example();
-
-Ti.API.info("module exampleProp is => " + couchdb_client.exampleProp);
-couchdb_client.exampleProp = "This is a test value";
-
-if (Ti.Platform.name == "android") {
-	var proxy = couchdb_client.createExample({message: "Creating an example Proxy"});
-	proxy.printMessage("Hello world!");
-}
+couchdb_client.allDbs({
+  success: function(data) {
+    label.text = JSON.stringify(data);
+  }
+});
