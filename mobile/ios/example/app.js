@@ -1,6 +1,6 @@
 // This is a test harness for your module
-// You should do something interesting in this harness 
-// to test out the module and to provide instructions 
+// You should do something interesting in this harness
+// to test out the module and to provide instructions
 // to users on how to use it by example.
 
 
@@ -21,5 +21,11 @@ couchdb.urlPrefix = "http://localhost:5984";
 couchdb.allDbs({
   success: function(data) {
     label.text = JSON.stringify(data);
+	var promise = couchdb.db("test").changes();
+	promise.onChange( function (data) {
+	    label.text = JSON.stringify(data);
+	});
   }
 });
+
+
