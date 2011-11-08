@@ -515,7 +515,7 @@
                 ajax({
                     method: method,
                     data: data,
-                    url: this.uri + '_design/' + tlist[0] + '/_list/' + tlist[1] + '/' + view
+                    url: this.uri + '_design/' + list[0] + '/_list/' + list[1] + '/' + view
                 },
                 options);
             },
